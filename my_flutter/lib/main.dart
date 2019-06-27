@@ -6,8 +6,8 @@ import 'package:flutter/services.dart';
 import 'package:my_flutter/widget/test.dart';
 
 void main() {
-//  runApp(_widgetForRoute(window.defaultRouteName));
-  runApp(_widgetForRoute("test"));
+  runApp(_widgetForRoute(window.defaultRouteName));
+//  runApp(_widgetForRoute("test"));
   if (Platform.isAndroid) {
     //android同步沉浸式
     SystemUiOverlayStyle systemUiOverlayStyle = SystemUiOverlayStyle(statusBarColor: Colors.transparent);
