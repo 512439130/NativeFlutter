@@ -36,9 +36,7 @@ public class MyFlutterActivity extends AppCompatActivity implements MethodChanne
         // 创建FlutterView
         flutterView = Flutter.createView(this, getLifecycle(), route + "?" + jsonObject.toString());
         setContentView(flutterView);
-
         registerMethodChannel();
-
     }
 
     @Override

@@ -5,16 +5,53 @@
     android:gravity="center"
     android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="原生的主界面" />
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
-    <Button
-        android:id="@+id/btn_native_to_flutter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="跳转flutter页面并传值"/>
+    </android.support.v4.view.ViewPager>
+
+    <View
+        android:id="@+id/id_hq_divide_view"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_gravity="bottom"
+        android:background="#ece7e7"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_gravity="bottom"
+        android:layout_height="60dp">
+
+        <RadioGroup
+            android:id="@+id/group_foot_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            android:layout_centerVertical="true">
+            <RadioButton
+                android:id="@+id/foot_bar_market"
+                style="@style/main_footer_bar_radio"
+                android:checked="true"
+                android:drawableTop="@drawable/widget_bar_quotation_bg"
+                android:text="行情" />
+            <RadioButton
+                android:id="@+id/foot_bar_trans"
+                style="@style/main_footer_bar_radio"
+                android:drawableTop="@drawable/widget_bar_transaction_bg"
+                android:text="交易" />
+            <RadioButton
+                android:id="@+id/foot_bar_otc"
+                style="@style/main_footer_bar_radio"
+                android:drawableTop="@drawable/widget_bar_finance_bg"
+                android:text="法币" />
+        </RadioGroup>
+    </RelativeLayout>
+
+
 
 
 </LinearLayout>
